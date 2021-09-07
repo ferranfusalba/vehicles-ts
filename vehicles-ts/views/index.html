@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex. Vehicles TS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <br>
+        <h1 class="text-center">Exercici Vehicles TypeScript</h1>
+        <br>
+        <div class="row">
+            <form id="addCar">
+                <div class="form-group">
+                    <label for="plate">Matrícula</label>
+                    <input type="text" class="form-control" id="plate" name="plate">
+                    <div class="invalid-feedback" id="errorMatricula"></div>
+                </div>
+                <div class="form-group">
+                    <label for="brand">Marca</label>
+                    <input type="text" class="form-control" id="brand" name="brand">
+                    <div class="invalid-feedback" id="errorBrand"></div>
+                </div>
+                <div class="form-group">
+                    <label for="color">Color</label>
+                    <input type="text" class="form-control" id="color" name="color">
+                    <div class="invalid-feedback" id="errorColor"></div>
+                </div>
+                <br>
+                <button type="button" onclick="createCar(newCar.plate.value,newCar.brand.value,newCar.color.value)" class="btn btn-primary">Següent</button>
+            </form>
+
+            <form id="addWheels" class="d-none">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="w1M">Marca Roda 1</label>
+                            <input type="text" class="form-control" id="w1M" name="w1M">
+                            <div class="invalid-feedback" id="errorw1M"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="w2M">Marca Roda 2</label>
+                            <input type="text" class="form-control" id="w2M" name="w2M">
+                            <div class="invalid-feedback" id="errorw2M"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="w3M">Marca Roda 3</label>
+                            <input type="text" class="form-control" id="w3M" name="w3M">
+                            <div class="invalid-feedback" id="errorw3M"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="w4M">Marca Roda 4</label>
+                            <input type="text" class="form-control" id="w4M" name="w4M">
+                            <div class="invalid-feedback" id="errorw4M"></div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="w1D">Diàmetre Roda 1</label>
+                            <input type="number" class="form-control" id="w1D" name="w1D">
+                            <div class="invalid-feedback" id="errorw1D"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="w2D">Diàmetre Roda 2</label>
+                            <input type="number" class="form-control" id="w2D" name="w2D">
+                            <div class="invalid-feedback" id="errorw2D"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="w3D">Diàmetre Roda 3</label>
+                            <input type="number" class="form-control" id="w3D" name="w3D">
+                            <div class="invalid-feedback" id="errorw3D"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="w4D">Diàmetre Roda 4</label>
+                            <input type="number" class="form-control" id="w4D" name="w4D">
+                            <div class="invalid-feedback" id="errorw4D"></div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <button type="button" onclick="createWheels(newWheels.w1M.value,newWheels.w1D.value,newWheels.w2M.value,newWheels.w2D.value,newWheels.w3M.value,newWheels.w3D.value,newWheels.w4M.value,newWheels.w4D.value)" class="btn btn-primary">Afegir un cotxe</button>
+            </form>
+            <div>
+                <br>
+                <div id="displayInfo">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../models/car.js"></script>
+    <script src="../models/wheel.js"></script>
+    <script src="../controllers/controller.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+
+
+
+<style>
+    .form-group {
+        margin-bottom: 30px;
+        position: relative;
+    }
+    
+    .invalid-feedback {
+        position: absolute;
+    }
+</style>
